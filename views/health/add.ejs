@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type"
+        content="text/html; charset=UTF-8">
+    <title>ヘルスケアアプリ</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+<body class="container">
+
+  <header>
+    <h1 class="display-4 text-primary"><div class="alert alert-warning" role="alert">
+      健康状態を追加</div></h1>
+  </header>
+  <div role="main">
+    <form method="post" action="/health/add">
+      <div class="form-group">
+        <label>日時</label>
+        <input type="date" name="begin" id="begin" 
+         class="form-control">
+      </div>
+      <div class="form-group">
+        <label>体重</label>
+        <input type="text" name="weight" id="weight" 
+        class="form-control" placeholder="60.0">
+      </div>
+      <div class="form-group">
+        <label>状態</label>
+        <input type="text" name="state" id="state" 
+         class="form-control" placeholder="良好">
+      </div>
+      <div class="form-group">
+        <label>体温</label>
+        <input type="text" name="temp" id="temp" 
+         class="form-control" placeholder="36.0">
+      </div>
+      <input type="submit" value="送信" 
+        class="btn btn-primary">
+    </form>
+    <p class="mt-4"><a href="/health"><button type="button" class="btn btn-success">⇦マイページへ戻る</button></a>
+  </div>
+</body>
+
+</html>

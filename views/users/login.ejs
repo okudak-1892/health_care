@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type"
+        content="text/html; charset=UTF-8">
+    <title>ユーザーログイン</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+<body class="container">
+  <header>
+    <h1 class="display-4">
+      <div class="alert alert-primary" role="alert">
+        ユーザーログイン
+      </div></h1>
+  </header>
+  <div role="main">
+    <p><u><%- content %></p></u>
+    <form method="post" action="/users/login">
+      <div class="form-group">
+        <label for="name">名前</label>
+        <input type="text" name="name" id="name" 
+          class="form-control" >
+      </div>
+      <div class="form-group">
+        <label for="pass">パスワード</label>
+        <input type="password" name="pass" id="pass" 
+          class="form-control" >
+      </div>
+      <a href="/sche"><input type="submit" value="ログイン"class="btn btn-primary" ></a>
+    </form>
+    <p class="mt-4"><a href="add"><button type="button" class="btn btn-success">ユーザーを追加</button></a>
+  </div>
+</body>
+
+</html>

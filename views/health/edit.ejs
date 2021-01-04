@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta http-equiv="content-type" 
+    content="text/html; charset=UTF-8">
+  <title>ヘルスケアアプリ</title>
+  <link rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  crossorigin="anonymous">
+  <link rel='stylesheet' 
+    href='/stylesheets/style.css' />
+</head>
+
+<body class="container">
+  <header>
+    <h1 class="display-4 text-primary"><div class="alert alert-danger" role="alert">
+      健康状態を編集
+    </div></h1>
+  </header>
+  <div role="main">
+    <form method="post" action="/health/edit">
+    <input type="hidden" name="id" value="<%= form.id %>">
+    <div class="form-group">
+        <label for="begin">日時</label>
+        <input type="date" name="begin" id="begin" 
+          class="form-control" value="<%=form.begin.getFullYear()%>/<%=form.begin.getMonth()+1%>/<%=form.begin.getDate()%>">
+      </div>
+      <div class="form-group">
+        <label for="weight">体重</label>
+        <input type="text" name="weight" id="weight" 
+          class="form-control" value="<%= form.weight%>">
+      </div>
+      <div class="form-group">
+        <label for="state">状態</label>
+        <td><input type="text" name="state" id="state" 
+            class="form-control" value="<%= form.state %>">
+      </div>
+      <div class="form-group">
+        <label for="temp">体温</label>
+        <input type="text" name="temp" id="temp" 
+          class="form-control" value="<%= form.temp %>">
+      </div>
+      <input type="submit" value="更新" 
+        class="btn btn-primary">
+    </form>
+  </div>
+  <p class="mt-4"><a href="/health"><button type="button" class="btn btn-success">⇦マイページへ戻る</button></a>
+</body>
+</html>

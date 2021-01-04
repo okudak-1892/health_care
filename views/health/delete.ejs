@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta http-equiv="content-type" 
+    content="text/html; charset=UTF-8">
+  <title>ヘルスケアアプリ</title>
+  <link rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  crossorigin="anonymous">
+  <link rel='stylesheet' 
+    href='/stylesheets/style.css' />
+</head>
+
+<body class="container">
+  <header>
+    <h1 class="display-4"><div class="alert alert-danger" role="alert">
+      健康状態を削除
+    </div></h1>
+  </header>
+  <div role="main">
+    <table class="table">
+      <tr>
+        <th>日時</th>
+        <td><%=form.begin.getFullYear()%>/<%=form.begin.getMonth()+1%>/<%=form.begin.getDate()%></td>
+      </tr>
+      <tr>
+        <th>体重</th>
+        <td><%= form.weight %></td>
+      </tr>
+      <tr>
+        <th>状態</th>
+        <td><%= form.state %></td>
+      </tr>
+      <tr>
+        <th>体温</th>
+        <td><%= form.temp %></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+      </tr>
+    </table>
+    <form method="post" action="/health/delete">
+      <input type="hidden" name="id" value="<%= form.id %>">
+      <input type="submit" value="削除" class="btn btn-primary">
+    </form>
+    <p class="mt-4"><a href="/health"><button type="button" class="btn btn-success">⇦マイページへ戻る</button></a>
+  </div>
+</body>
+
+</html>

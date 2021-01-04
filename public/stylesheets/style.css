@@ -1,0 +1,85 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+h2{
+  text-align: center;
+}
+a {
+  color: #4169e1;
+}
+ h1{
+   color:#00fa9a;
+   font-size: 50px;
+   text-align: center;
+ }
+ tr{
+  text-align: center;
+ }
+.table a{
+  text-align: right;
+}
+span{
+  text-align: right;
+}
+.btn-primary{
+  position: relative;
+	top: 20px;
+	left:500px;
+}
+
+.btn-success{
+  text-align: center;
+}
+body{
+  background-color: beige;
+}
+.btn-info{
+  float: left;
+  margin: 10px 160px 10px 50px;
+}
+
+.bg{
+  height: 700px;
+  background-image: url("sample.jpg");
+}
+
+.box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #4ec4d3;
+  border-radius: 10px;
+}
+.box p {
+  margin: 0; 
+  padding: 0;
+}
+
+.box0{
+  margin:2em 0;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+}
+.box0:before,.box18:after
+{
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
+}
+.box0:after {
+  top:-12px;
+  left:-12px;
+}
+.box0:before {
+  bottom:-12px;
+  right:-12px;
+}
+.box0p {
+  margin: 0; 
+  padding: 0;
+}
